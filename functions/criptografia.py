@@ -25,9 +25,10 @@ def desencriptar(msg:str, p: int, q: int, e: int, simple=False):
     m = lambda M: pow(M, d, n)
     textoEncriptado = msg
     if simple:
-        tabelaEncriptada = list(map(lambda x: toBaseTen(x, base), textoEncriptado.split(chr(base + 1))))
-    else:
         tabelaEncriptada = list(map(int, textoEncriptado.split(' ')))
+    else:
+        tabelaEncriptada = list(map(lambda x: toBaseTen(x, base), textoEncriptado.split(chr(base + 1))))
+        
     tabelaDesencriptada = list(map(m, tabelaEncriptada))
     textoDesencriptado = toText(tabelaDesencriptada)
     with open("mensagem_desencriptada.txt", "wb") as file:
