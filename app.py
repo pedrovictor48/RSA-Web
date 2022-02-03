@@ -15,7 +15,7 @@ def func():
         data = request.get_json()
         msg, N, E = data["msg"], int(data["N"]), int(data["E"])
         return jsonify({
-            "msg": encriptar(msg, N, E)
+            "msg": encriptar(msg, N, E, True)
         })
 
 @app.route('/desencriptar', methods=["POST"])
@@ -24,7 +24,7 @@ def func2():
         data = request.get_json()
         msg, P, Q, E = data["msg"], int(data["P"]), int(data["Q"]), int(data["E"])
         return jsonify({
-            "msg": desencriptar(msg, P, Q, E)
+            "msg": desencriptar(msg, P, Q, E, True)
         })
 
 @app.route('/gerar', methods=["POST"])
