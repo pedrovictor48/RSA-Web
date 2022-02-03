@@ -61,10 +61,12 @@ div.center > * {
     min-height: 200px;
     min-width: 250px;
     border: 2px solid black;
+    background-color: grey;
 }
 
 .number-input {
     max-width: 80px;
+    background-color: grey;
 }
 
 button {
