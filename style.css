@@ -1,5 +1,14 @@
 * {
     font-family: monospace;
+    color:white;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    align-items: center;
 }
 
 input::-webkit-outer-spin-button,
@@ -8,52 +17,62 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-.number-input {
-    width: 80px;
+h1 {
     text-align: center;
 }
 
-.box-texto {
-    text-align: left;
-    height: fit-content;
-}
-
-.area-texto {
-    width: 350px;
-    height: 250px;
+.outer-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+    background-color: rgb(56, 56, 56);
+    margin-bottom: 5%;
+    padding: 10px;
+    border-radius: 3%;
 }
 
 .center {
+    width: 100%;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    text-align: center;
-    margin-bottom: 50px;
+}
+
+div.center > * {
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .inner-center {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-left: 100px;
-    margin-right: 100px;
+    align-items: center;    
+}
+
+.box-texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.area-texto {
+    min-height: 200px;
+    min-width: 250px;
+    border: 2px solid black;
+}
+
+.number-input {
+    max-width: 80px;
 }
 
 button {
-    font-weight: bold;
-    width: 150px;
+    background-color: grey;
 }
 
-.vertical-run {
-    width: 150px;
-}
-
-#public-key-button {
-    height: fit-content;
-    margin-left: 100px;
-    margin-right: 100px;
-}
-
-.pequeno-hover {
-    font-size: 10px;
-    color: red;
+@media only screen and (max-width: 1000px) {
+  .center {
+      flex-direction: column;
+  }
 }
